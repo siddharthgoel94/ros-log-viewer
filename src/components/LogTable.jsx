@@ -58,7 +58,7 @@ const LogTable = ({ logs }) => {
             <TableRow
               key={index}
               sx={{
-                bgcolor: log.severity === 'ERROR' || log.severity === 'FATAL' ? 'error.light' : 'inherit',
+                bgcolor: log.severity === 'ERROR' ? 'error.light' : 'inherit',
                 '&:hover': log.severity !== 'ERROR' ?{ bgcolor: 'grey.100' }:{bgcolor: 'grey.400' },
               }}
             >
