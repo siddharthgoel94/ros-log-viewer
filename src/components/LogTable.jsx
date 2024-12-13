@@ -34,11 +34,25 @@ const LogTable = ({ logs }) => {
 
   return (
     <>
-    <TableContainer component={Paper} sx={{ boxShadow: 3, borderRadius: 2 }}>
+     {logs.length>0 && (
+    <TableContainer component={Paper} elevation={3} sx={{ borderRadius: 3 }}>
+       
+    <Typography
+      variant="body2"
+      sx={{
+        color: "secondary.dark",
+        textAlign: "center",
+        marginTop:"1rem",
+        fontSize:"2rem"
+      }}
+    >
+      Here are all the logs compiled at one place
+    </Typography>
+       
 
       <Table sx={{ minWidth: 650, borderRadius: 2 }} aria-label="logs table">
         <TableHead>
-          <TableRow sx={{ bgcolor: 'primary.light' }}>
+          <TableRow>
             <TableCell align="center" sx={{ fontWeight: 'bold',  }}>
               Timestamp
             </TableCell>
@@ -79,8 +93,10 @@ const LogTable = ({ logs }) => {
         </TableBody>
       </Table>
     </TableContainer>
+)}
   </>
-  );
+  )
+  ;
 };
 
 export default LogTable;
