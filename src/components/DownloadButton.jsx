@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Button } from "@mui/material";
 const DownloadButton = ({ severity, keyword }) => {
   const handleDownload = async () => {
     const url = `http://localhost:8000/logs/download/?severity=${severity}&&keyword=${keyword}`;
@@ -19,9 +19,11 @@ const DownloadButton = ({ severity, keyword }) => {
   };
 
   return (
-    <button onClick={handleDownload} style={{ margin: "1rem", padding: "0.5rem 1rem" }}>
+    <Button onClick={handleDownload} 
+    variant="contained"
+    sx={{ margin: "2.2rem 1rem", padding: "0.5rem 1rem" }}>
       Download Logs
-    </button>
+    </Button>
   );
 };
 
