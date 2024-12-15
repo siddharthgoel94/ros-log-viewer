@@ -44,3 +44,6 @@ http://localhost:5173
 - React: For building the user interface.
 - Material-UI (MUI): For styling and components.
 - Axios: For making HTTP requests to the backend.
+
+Access backend repository here: https://github.com/siddharthgoel94/ros-log-viewer-backend
+Follow the instructions to setup backend as well
