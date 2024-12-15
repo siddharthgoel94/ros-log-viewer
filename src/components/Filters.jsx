@@ -8,8 +8,6 @@ const Filters = ({ onApplyFilters }) => {
 
   const handleApply = () => {
     onApplyFilters(severity, keyword);
-    console.log(severity);
-    console.log(keyword);
   };
   const handleSeverityChange = (e) => {
     const newSeverity = e.target.value;

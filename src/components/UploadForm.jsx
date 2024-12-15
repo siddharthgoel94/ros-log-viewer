@@ -23,14 +23,14 @@ const UploadForm = ({ onLogsUpdate }) => {
   const backend_url_main=import.meta.env.VITE_BACKEND_URL_MAIN
   const handleFileUpload = async (event) => {
     const file = event.target.files[0];
-    console.log(event.target.files[0].name);
+    
     setFileName(event.target.files[0].name)
     const formData = new FormData();
     formData.append("file", file);
     try {
       const response = await axios.post(`${backend_url_main}/logs/upload/`, formData);
       const logsResponse = await axios.get(`${backend_url_main}/logs/`);
-      console.log(logsResponse);
+      
       
       onLogsUpdate(logsResponse.data.logs);
 
