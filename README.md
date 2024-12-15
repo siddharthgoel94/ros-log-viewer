@@ -1,8 +1,46 @@
-# React + Vite
+# React Frontend for Log Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## **Description**
+This is the frontend of the log management system, built using React and Material-UI. It provides an interface for uploading log files, filtering logs, and interacting with the backend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **Features**
+- Upload log files to the backend.
+- Live filtering of logs based on severity and keyword.
+- Download filtered logs from the backend.
+- A responsive and user-friendly UI with Material-UI components.
+
+---
+
+## **Setup Instructions**
+
+### 1. **Clone the Repository**
+```bash
+git clone <repository_url>
+```
+### 2. **Install Dependencies**
+```bash
+npm install
+```
+### 3. **Setup Environment Variables**
+- Navigate to .env.example for a sample .env file 
+- Create a .env file
+- Add loalhost:8000 as a backend URL there
+```bash
+VITE_BACKEND_URL_MAIN=http://localhost:8000
+```
+### 4. **Start the development Server**
+```bash
+npm run dev
+```
+### 5. **Access frontend URL**
+- The application will be available at:
+```bash
+http://localhost:5173
+```
+
+## Dependencies
+- React: For building the user interface.
+- Material-UI (MUI): For styling and components.
+- Axios: For making HTTP requests to the backend.
