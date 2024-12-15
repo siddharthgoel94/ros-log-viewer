@@ -17,7 +17,7 @@ This is the frontend of the log management system, built using React and Materia
 
 ### 1. **Clone the Repository**
 ```bash
-git clone <repository_url>
+git clone https://github.com/siddharthgoel94/ros-log-viewer
 ```
 ### 2. **Install Dependencies**
 ```bash
