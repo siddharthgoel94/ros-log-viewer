@@ -47,6 +47,7 @@ http://localhost:5173
 
 Access backend repository here: https://github.com/siddharthgoel94/ros-log-viewer-backend
 Follow the instructions to setup backend as well
+(The backend repsonse might take a longer time to load while testing as Render spins down an application if its inactive)
 
 ## Screenshots
 <img width="1289" alt="Screenshot 2024-12-15 at 2 36 17 PM" src="https://github.com/user-attachments/assets/c3345b34-e699-4174-b61e-546816f229ee" height="50%" width="50%" />
