@@ -1,8 +1,11 @@
 import React from "react";
 import { Button } from "@mui/material";
 const DownloadButton = ({ severity, keyword }) => {
+  const backend_url_main=import.meta.env.VITE_BACKEND_URL_MAIN;
   const handleDownload = async () => {
-    const url = `http://localhost:8000/logs/download/?severity=${severity}&&keyword=${keyword}`;
+    const url = `${backend_url_main}/logs/download/?severity=${severity}&&keyword=${keyword}`;
+
+    console.log(backend_url_main);
 
     // Create a hidden link element
     const link = document.createElement("a");

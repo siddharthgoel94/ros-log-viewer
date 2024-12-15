@@ -20,6 +20,7 @@ const VisuallyHiddenInput = styled('input')({
 
 const UploadForm = ({ onLogsUpdate }) => {
   const [fileName,setFileName]=React.useState("")
+  const backend_url_main=import.meta.env.VITE_BACKEND_URL_MAIN
   const handleFileUpload = async (event) => {
     const file = event.target.files[0];
     console.log(event.target.files[0].name);
@@ -27,8 +28,8 @@ const UploadForm = ({ onLogsUpdate }) => {
     const formData = new FormData();
     formData.append("file", file);
     try {
-      const response = await axios.post("/logs/upload/", formData);
-      const logsResponse = await axios.get("/logs/");
+      const response = await axios.post(`${backend_url_main}/logs/upload/`, formData);
+      const logsResponse = await axios.get(`${backend_url_main}/logs/`);
       console.log(logsResponse);
       
       onLogsUpdate(logsResponse.data.logs);
